@@ -1,8 +1,6 @@
 Swift
 =====
 
-Quick Swift reference.
-
 #### Swift Resources
 
 - [The Swift Programming Language - Apple Developer](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/)

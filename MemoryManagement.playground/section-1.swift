@@ -67,3 +67,16 @@ renters["John"]!.card?.holder.getCardNumber() // you can be sure the holder exis
 
 renters["John"] = nil   // Person() and CreditCard() objects are deallocated
 apts[0] = nil   // Apartment() object is deallocated
+
+// MARK: prevent leaks with closure captures
+
+class TempNotifier {
+    var onChange: (Int) -> Void = {_ in}
+    var currentTemp = 72
+    
+    init() {
+        onChange = {[unowned self] temp in // prevent strong ref for 'self'
+            self.currentTemp = temp
+        }
+    }
+}
